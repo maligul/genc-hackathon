@@ -1,7 +1,7 @@
 /**
  * @format
  */
-
+import React from 'react';
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -12,11 +12,23 @@ import ExampleScreen from './pages/ExampleScreen';
 import ProfileScreen from './pages/ProfileScreen';
 import TopListScreen from './pages/TopListScreen';
 
+
 const MissionStack = createStackNavigator({
     Home: {screen: MissionScreen},
     Example: {screen: ExampleScreen},
   },{
     initialRouteName:"Home",
+
+    defaultNavigationOptions:{
+        headerStyle: {
+            backgroundColor: '#6E77F6',
+            shadowOpacity:0,
+            elevation:0
+        },
+        headerTitleStyle:{
+            color:"white"
+        }
+    }
   });
 
 const ProfileStack= createStackNavigator({

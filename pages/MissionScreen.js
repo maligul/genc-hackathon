@@ -6,22 +6,24 @@ import {
     Button,
     StyleSheet,
     FlatList,
-    View
+    View,
+    Image
 } from 'react-native'; 
 
 import CardWithAvatar from '../components/CardWithAvatar';
 import MissionCard from '../components/MissionCard';
+import Logo from '../assets/images/logo.png';
 
 class MissionScreen extends Component {
     static navigationOptions = {
-        headerTitle: "Mission Screen",
-        
+        headerTitle: ()=><View style={{alignItems:"center",flex:1,paddingTop:20}}><Image source={Logo} style={{width: 80, height: 80}}/></View> 
       };
     render = () => {
         const {navigation} = this.props;
         return (
             <SafeAreaView style={styles.page}>
-                <ScrollView>
+                <View style={{backgroundColor:"#6E77F6",height:20,borderBottomRightRadius:20,borderBottomLeftRadius:20}}/>
+                <ScrollView style={styles.scroll}>
                     <Text style={styles.title}>Yakınındaki Görevler</Text>
 
                     <FlatList
@@ -70,6 +72,9 @@ class MissionScreen extends Component {
 const styles = StyleSheet.create({
     page: {
         backgroundColor: "#F4F4F4",
+        
+    },
+    scroll:{
         paddingHorizontal:10,
     },
     title:{
