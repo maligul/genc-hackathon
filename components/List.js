@@ -11,26 +11,6 @@ import {
      ListItem,
     }from 'react-native-elements';
 
-const listData= [    
-    {
-        name: 'Burakhan',
-        points: '250 puan',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        
-    },
-    {
-        name: 'Ahmet',
-        points: '150 puan',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        
-    },
-    {
-        name: 'Mali',
-        points: '100 puan',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        
-    },
-];
 class List extends Component{
     keyExtractor = (item, index) => index.toString()
 
@@ -48,18 +28,18 @@ class List extends Component{
     render = () => {
       return(
         
-        <SafeAreaView>
-            <ScrollView style={{ margin:20,}}>
-             
+             <View  style={{
+                 backgroundColor:"white",
+                 paddingVertical:20,
+                 borderRadius:20
+             }}>
                 <FlatList
                      
                      keyExtractor={this.keyExtractor}
                      data={listData}
                      renderItem={this.renderItem}
                 />
-             
-            </ScrollView>
-        </SafeAreaView>
+             </View>
       )
         
          
@@ -79,4 +59,81 @@ const styles = StyleSheet.create({
         borderRadius: 50,
     }
 });
+
+
+const listData= [    
+    {
+        name: 'Burakhan',
+        points: '250 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Ahmet',
+        points: '150 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Mali',
+        points: '100 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Burakhan',
+        points: '250 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Ahmet',
+        points: '150 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Mali',
+        points: '100 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Burakhan',
+        points: '250 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Ahmet',
+        points: '150 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Mali',
+        points: '100 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Burakhan',
+        points: '250 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Ahmet',
+        points: '150 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    },
+    {
+        name: 'Mali',
+        points: '100 puan',
+        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        
+    }
+];
+
 export default List;

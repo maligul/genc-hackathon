@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import List from '../components/List';
 import TopListProfile from '../components/TopListProfile'
+import Badge from '../components/Badge';
 
 class TopListScreen extends Component {
 
@@ -19,8 +20,10 @@ class TopListScreen extends Component {
         return (
            
             <SafeAreaView  style ={styles.page}>
-                <ScrollView>
-                    <TopListProfile />
+            <Badge/>
+                <ScrollView style={styles.scroll}>
+                    
+                    <TopListProfile/>
                     <List />
                 </ScrollView>
             </SafeAreaView>
@@ -33,6 +36,9 @@ const styles = StyleSheet.create({
     page: {
         backgroundColor: "#F4F4F4",
         flex:1,
+    },
+    scroll:{
+        paddingHorizontal:20
     }
 })
 export default TopListScreen;

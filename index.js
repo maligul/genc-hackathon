@@ -46,7 +46,8 @@ const ProfileStack= createStackNavigator({
 const TopListStack= createStackNavigator({
     TopList:{screen: TopListScreen}
 },{
-    initialRouteName:"TopList"
+    initialRouteName:"TopList",
+    defaultNavigationOptions:navigationOptions
 });  
 
 const BottomNavigator = createBottomTabNavigator(

@@ -14,9 +14,8 @@ import Icon from 'react-native-vector-icons/Entypo'
 class TopListProfile extends Component {
     render = () => {
         return(
-          <SafeAreaView style= {{backgroundColor: "#F4F4F4"}}>
-              <ScrollView>
-               <View style ={styles.profileItem} >
+          
+               <View style ={{...styles.profileItem,...this.props.style}} >
                     <View style={styles.profileAvatar}><Avatar source ={require('../images/man.jpg')} size="large" rounded /></View>
                     <View style={styles.profileName}><Text
                     style={{fontFamily: "semi",
@@ -26,19 +25,18 @@ class TopListProfile extends Component {
                     </View>
                     <View  style={styles.profileScore}><Text style={{fontFamily: "bold", fontSize: 15,}}> 150 </Text></View>
                </View>
-              </ScrollView>
-          </SafeAreaView>
+              
         )
       }
 
 }
 const styles = StyleSheet.create({
     profileItem: {
+        marginVertical:20,  
         flexDirection: 'row',
         alignItems: "center",
         height: 100,
         flex: 1,
-        margin:20,
         backgroundColor:'white',
         borderRadius: 10,
     },
