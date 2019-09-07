@@ -5,18 +5,17 @@ import {
     ScrollView
 } from 'react-native';
 
-class ProfileScreen extends Component {
+class TopListScreen extends Component {
 
     static navigationOptions = {
         headerTitle: "Profile Screen",
         
       };
-      
     render = () => {
         return (
             <SafeAreaView>
                 <ScrollView>
-                    <Text>Profile Screen</Text>
+                    <Text>TopListScreen Screen</Text>
                 </ScrollView>
             </SafeAreaView>
         ) 
@@ -24,6 +23,6 @@ class ProfileScreen extends Component {
 
 }
 
-export default ProfileScreen;
+export default TopListScreen;
 
 

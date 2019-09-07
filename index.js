@@ -10,6 +10,7 @@ import {createAppContainer } from 'react-navigation';
 import MissionScreen from './pages/MissionScreen';
 import ExampleScreen from './pages/ExampleScreen';
 import ProfileScreen from './pages/ProfileScreen';
+import TopListScreen from './pages/TopListScreen';
 
 const MissionStack = createStackNavigator({
     Home: {screen: MissionScreen},
@@ -24,10 +25,17 @@ const ProfileStack= createStackNavigator({
     initialRouteName:"Profile"
 });  
 
+const TopListStack= createStackNavigator({
+    TopList:{screen: TopListScreen}
+},{
+    initialRouteName:"TopList"
+});  
+
 const BottomNavigator = createBottomTabNavigator(
     {
         Mission: {screen: MissionStack},
-        Profile: {screen: ProfileStack}
+        Profile: {screen: ProfileStack},
+        TopList: {screen: TopListStack} 
     },
     {
         initialRouteName: "Mission"
