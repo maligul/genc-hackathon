@@ -3,8 +3,11 @@ import {
     Text,
     SafeAreaView,
     ScrollView,
-    Button
+    Button,
+    StyleSheet
 } from 'react-native'; 
+
+import CardWithAvatar from '../components/CardWithAvatar';
 
 class MissionScreen extends Component {
     static navigationOptions = {
@@ -14,19 +17,27 @@ class MissionScreen extends Component {
     render = () => {
         const {navigation} = this.props;
         return (
-            <SafeAreaView>
+            <SafeAreaView style={styles.page}>
                 <ScrollView>
                     <Text>Mission Page</Text>
-                    <Button
-                        onPress = {()=> navigation.navigate('Example')}
-                        title = {"Go To Example"}
-                    />          
+                    <CardWithAvatar
+                        url={'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'}
+                    >
+                        <Text>asd</Text>
+                    </CardWithAvatar>
+                             
                 </ScrollView>
             </SafeAreaView>
         ) 
     }
 
 }
+
+const styles = StyleSheet.create({
+    page: {
+        backgroundColor: "#F4F4F4"
+    } 
+});
 
 export default MissionScreen;
 
