@@ -15,7 +15,7 @@ class TopListProfile extends Component {
     render = () => {
         return(
           
-               <View style ={{...styles.profileItem,...this.props.style}} >
+               <View style ={{...styles.profileItem, ...this.props.style}} >
                     <View style={styles.profileAvatar}><Avatar source ={require('../images/man.jpg')} size="large" rounded /></View>
                     <View style={styles.profileName}><Text
                     style={{fontFamily: "semi",
@@ -32,7 +32,7 @@ class TopListProfile extends Component {
 }
 const styles = StyleSheet.create({
     profileItem: {
-        marginVertical:20,  
+        marginVertical:10,  
         flexDirection: 'row',
         alignItems: "center",
         height: 100,
