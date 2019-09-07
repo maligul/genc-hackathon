@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {
     Text,
-    SafeAreaView,
+    SafeAreaView,   
     ScrollView,
     StyleSheet,
     View,

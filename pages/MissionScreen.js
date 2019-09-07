@@ -7,13 +7,12 @@ import {
     StyleSheet,
     FlatList,
     View,
-    Image
+    Image,
+    TouchableOpacity
 } from 'react-native'; 
 
-import CardWithAvatar from '../components/CardWithAvatar';
 import MissionCard from '../components/MissionCard';
 import Logo from '../assets/images/logo.png';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import Badge from '../components/Badge';
 class MissionScreen extends Component {
     static navigationOptions = {
@@ -32,13 +31,15 @@ class MissionScreen extends Component {
                         horizontal
                         data={data}
                         renderItem={({item}) =>
-                            <MissionCard
-                                photoUrl={item.photoUrl}
-                                charityName={item.charityName}
-                                description={item.description}
-                                point={item.point}
-                                width={175}
-                            />
+                            <TouchableOpacity onPress={()=>navigation.navigate("MissionDetail")}>
+                                <MissionCard
+                                    photoUrl={item.photoUrl}
+                                    charityName={item.charityName}
+                                    description={item.description}
+                                    point={item.point}
+                                    width={175}
+                                />
+                            </TouchableOpacity>
                         }
                     />
 
