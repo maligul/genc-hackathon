@@ -4,18 +4,19 @@ import {
     SafeAreaView,
     ScrollView
 } from 'react-native';
+import List from '../components/List';
 
 class TopListScreen extends Component {
 
     static navigationOptions = {
-        headerTitle: "Profile Screen",
+        headerTitle: "Top List Screen",
         
       };
     render = () => {
         return (
             <SafeAreaView>
                 <ScrollView>
-                    <Text>TopListScreen Screen</Text>
+                    <List />
                 </ScrollView>
             </SafeAreaView>
         ) 
