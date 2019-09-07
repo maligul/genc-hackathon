@@ -10,10 +10,12 @@ import {createAppContainer } from 'react-navigation';
 import MissionScreen from './pages/MissionScreen';
 import ExampleScreen from './pages/ExampleScreen';
 import ProfileScreen from './pages/ProfileScreen';
+import PageScreen from './pages/PageScreen';
 
 const MissionStack = createStackNavigator({
     Home: {screen: MissionScreen},
     Example: {screen: ExampleScreen},
+    Page: {screen: PageScreen}
   },{
     initialRouteName:"Home",
   });
