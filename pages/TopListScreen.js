@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {
     Text,
     SafeAreaView,
-    ScrollView
+    ScrollView,
+    StyleSheet,
+    View,
 } from 'react-native';
 import List from '../components/List';
 import TopListProfile from '../components/TopListProfile'
@@ -15,17 +17,24 @@ class TopListScreen extends Component {
       };
     render = () => {
         return (
-            <SafeAreaView>
+           
+            <SafeAreaView  style ={styles.page}>
                 <ScrollView>
                     <TopListProfile />
                     <List />
                 </ScrollView>
             </SafeAreaView>
+       
         ) 
     }
 
 }
-
+const styles = StyleSheet.create({
+    page: {
+        backgroundColor: "#F4F4F4",
+        flex:1,
+    }
+})
 export default TopListScreen;
 
 
