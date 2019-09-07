@@ -10,6 +10,7 @@ import MissionScreen from './pages/MissionScreen';
 import ShopScreen from './pages/ShopScreen';
 import ProfileScreen from './pages/ProfileScreen';
 import TopListScreen from './pages/TopListScreen';
+import MissionDetailScreen from './pages/MissionDetailScreen.js';
 
 const navigationOptions = {
     headerStyle: {
@@ -23,10 +24,10 @@ const navigationOptions = {
 };
 
 const MissionStack = createStackNavigator({
-    Home: {screen: MissionScreen}
+    Home: {screen: MissionScreen},
+    MissionDetail: {screen: MissionDetailScreen}
   },{
     initialRouteName:"Home",
-
     defaultNavigationOptions:navigationOptions
   });
 
