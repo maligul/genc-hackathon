@@ -5,6 +5,7 @@ import {
     ScrollView
 } from 'react-native';
 import List from '../components/List';
+import TopListProfile from '../components/TopListProfile'
 
 class TopListScreen extends Component {
 
@@ -16,6 +17,7 @@ class TopListScreen extends Component {
         return (
             <SafeAreaView>
                 <ScrollView>
+                    <TopListProfile />
                     <List />
                 </ScrollView>
             </SafeAreaView>
