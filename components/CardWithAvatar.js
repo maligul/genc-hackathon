@@ -14,15 +14,19 @@ function CardWithAvatar(props){
     let {
         avatarSize = 75,
         borderRadius = 20,
-        url = undefined
+        url = undefined,
+        width = undefined,
+        style
     } = props;
 
     const styles = StyleSheet.create({
         avatarContainer:{
+            
             alignItems:"center",
             marginTop:-1* avatarSize /2
         },
         card:{
+            width: width,
             marginTop: avatarSize / 2, 
             paddingRight: padding,
             paddingLeft: padding,
@@ -36,7 +40,7 @@ function CardWithAvatar(props){
 
         
 
-        <View style={styles.card}>
+        <View style={{...style,...styles.card}}>
             <View style={styles.avatarContainer}>
                 <Avatar
                     size={avatarSize}
