@@ -12,6 +12,7 @@ import {
 import CardWithAvatar  from './CardWithAvatar';
 
 export default function MissionCard(props){
+
     const {
         charityName,
         photoUrl,
@@ -32,7 +33,8 @@ export default function MissionCard(props){
             <View style={styles.buttonContainer}>
                 <Button
                     buttonStyle={{
-                        padding:3
+                        padding:3,
+                        borderRadius:20
                     }}
                     containerStyle={styles.button}
                     title={point + " puan"}
