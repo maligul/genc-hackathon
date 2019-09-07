@@ -6,37 +6,40 @@ import {
     FlatList
 } from 'react-native'; 
  import {
-     ListItem
+     ListItem,
     }from 'react-native-elements';
+
 const listData= [    
     {
         name: 'Burakhan',
         points: '250',
         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        orderholder:  'av-timer',
     },
     {
         name: 'Ahmet',
         points: '150',
         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        orderholder:  'av-timer',
     },
     {
         name: 'Mali',
         points: '100',
         avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-       
+        orderholder:  'av-timer',
     },
 ];
 class List extends Component{
     keyExtractor = (item, index) => index.toString()
 
-    renderItem = ({ item }) => (
+    renderItem = ({ item , index}) => (
          <ListItem
             title={item.name}
-            
+            leftElement={(<Text>{index + 1}</Text>)}
             leftAvatar={{ source: { uri: item.avatar_url } }}
-            bottomDivider
             rightTitle={item.points}
-            chevron
+            rightTitleStyle={{fontFamily: "bold", color:"black"}}
+            
             />
 )
     
