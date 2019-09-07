@@ -13,7 +13,8 @@ import {
 import CardWithAvatar from '../components/CardWithAvatar';
 import MissionCard from '../components/MissionCard';
 import Logo from '../assets/images/logo.png';
-
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+import Badge from '../components/Badge';
 class MissionScreen extends Component {
     static navigationOptions = {
         headerTitle: ()=><View style={{alignItems:"center",flex:1,paddingTop:20}}><Image source={Logo} style={{width: 80, height: 80}}/></View> 
@@ -22,7 +23,7 @@ class MissionScreen extends Component {
         const {navigation} = this.props;
         return (
             <SafeAreaView style={styles.page}>
-                <View style={{backgroundColor:"#6E77F6",height:20,borderBottomRightRadius:20,borderBottomLeftRadius:20}}/>
+                <Badge/>
                 <ScrollView style={styles.scroll}>
                     <Text style={styles.title}>Yakınındaki Görevler</Text>
 
