@@ -27,6 +27,7 @@ class MissionDetailScreen extends Component {
                 <ScrollView style={styles.scroll}>
                    <CardWithAvatar
                       url = {"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGnyUhIZt8GvU3rjye__ROoNE91gkBRHPvsgjtqZhEG177B67s"}
+                      onPress = {()=>{this.props.navigation.navigate('CharityInfo')}}  
                    >
                    <Text style={styles.title}>Görev Tanımı</Text>
                    <Text style={styles.description}>{description}</Text>
@@ -48,11 +49,11 @@ class MissionDetailScreen extends Component {
                         <MapView
                             style={{height:150,marginVertical:20,borderRadius:20}}
                             initialRegion={{
-                                latitude: 37.78825,
-                                longitude: -122.4324,
+                                latitude: 41.034102,
+                                longitude: 28.9834093,
                                 latitudeDelta: 0.0922,
                                 longitudeDelta: 0.0421,
-                            }}
+                            }}  
                         />
                    </View>
                    

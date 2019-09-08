@@ -8,20 +8,50 @@ import {
     FlatList,
     View,
     Image,
-    TouchableOpacity
+
 } from 'react-native'; 
 
 import MissionCard from '../components/MissionCard';
 import Logo from '../assets/images/logo.png';
 import Badge from '../components/Badge';
+import BlurOverlay,{closeOverlay,openOverlay} from 'react-native-blur-overlay';
+import FAB from 'react-native-fab'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Overlay } from 'react-native-elements';
+import Filter from '../components/Filter';
+
 class MissionScreen extends Component {
     static navigationOptions = {
         headerTitle: ()=><View style={{alignItems:"center",flex:1,paddingTop:20}}><Image source={Logo} style={{width: 80, height: 80}}/></View> 
       };
+
+ 
+    state = {
+        overlay:false
+    }
+
+    changeOverlay = ()=>{
+        this.setState({
+            overlay:!this.state.overlay
+        })
+    }
+
     render = () => {
         const {navigation} = this.props;
         return (
+            <React.Fragment>
+            
+                <Overlay 
+                    isVisible={this.state.overlay}
+                    fullScreen
+                    overlayBackgroundColor="rgba(0, 0, 0, .6)"
+                    
+                >
+                    <Filter onClose={this.changeOverlay}/>
+                </Overlay>
+          
             <SafeAreaView style={styles.page}>
+            
                 <Badge/>
                 <ScrollView style={styles.scroll}>
                     <Text style={styles.title}>Yakınındaki Görevler</Text>
@@ -31,15 +61,15 @@ class MissionScreen extends Component {
                         horizontal
                         data={data}
                         renderItem={({item}) =>
-                            <TouchableOpacity onPress={()=>navigation.navigate("MissionDetail")}>
+                            
                                 <MissionCard
+                                    onPress={()=>navigation.navigate("MissionDetail")}
                                     photoUrl={item.photoUrl}
                                     charityName={item.charityName}
                                     description={item.description}
                                     point={item.point}
                                     width={175}
                                 />
-                            </TouchableOpacity>
                         }
                     />
 
@@ -53,6 +83,7 @@ class MissionScreen extends Component {
                         renderItem={({item}) =>
                             <View style={{alignItems:"center",flex:1}}>
                             <MissionCard
+                                onPress={()=>navigation.navigate("MissionDetail")}
                                 style={{flex:1}}
                                 photoUrl={item.photoUrl}
                                 charityName={item.charityName}
@@ -63,9 +94,14 @@ class MissionScreen extends Component {
                             </View>
                         }
                     />
-
+                    
                 </ScrollView>
+                
+                
             </SafeAreaView>
+            <FAB buttonColor="red" iconTextColor="#FFFFFF" onClickAction={this.changeOverlay} visible={true} iconTextComponent={<Icon name="filter"/>} />
+            
+        </React.Fragment>
         ) 
     }
 

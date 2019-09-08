@@ -2,7 +2,8 @@ import React from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    TouchableOpacity
 } from 'react-native';
 
 import {
@@ -27,7 +28,9 @@ export default function MissionCard(props){
             width={width}
             url={photoUrl}
             style={style}
+            onPress={props.onPress}
         >
+        <TouchableOpacity onPress={props.onPress}>
             <Text style={styles.title}>{charityName}</Text>
             <Text style={styles.description}>{description}</Text>
             <View style={styles.buttonContainer}>
@@ -40,7 +43,7 @@ export default function MissionCard(props){
                     title={point + " puan"}
                 />
             </View>
-            
+            </TouchableOpacity>
         </CardWithAvatar>
     );
 

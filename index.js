@@ -1,6 +1,7 @@
 /**
  * @format
  */
+
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import {createStackNavigator} from 'react-navigation-stack';
@@ -11,6 +12,7 @@ import ShopScreen from './pages/ShopScreen';
 import ProfileScreen from './pages/ProfileScreen';
 import TopListScreen from './pages/TopListScreen';
 import MissionDetailScreen from './pages/MissionDetailScreen.js';
+import CharityInfoScreen from './pages/CharityInfoScreen.js';
 
 const navigationOptions = {
     headerStyle: {
@@ -25,7 +27,8 @@ const navigationOptions = {
 
 const MissionStack = createStackNavigator({
     Home: {screen: MissionScreen},
-    MissionDetail: {screen: MissionDetailScreen}
+    MissionDetail: {screen: MissionDetailScreen},
+    CharityInfo : {screen: CharityInfoScreen}
   },{
     initialRouteName:"Home",
     defaultNavigationOptions:navigationOptions

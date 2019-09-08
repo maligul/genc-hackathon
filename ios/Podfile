@@ -29,6 +29,8 @@ target 'iyi_app_native' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+  pod 'SajjadBlurOverlay', :path => '../node_modules/react-native-blur-overlay'
+
   target 'iyi_app_nativeTests' do
     inherit! :search_paths
     # Pods for testing
