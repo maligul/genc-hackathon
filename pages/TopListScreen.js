@@ -23,7 +23,6 @@ class TopListScreen extends Component {
             <SafeAreaView  style ={styles.page}>
             <Badge/>
                 <ScrollView style={styles.scroll}>
-                    
                     <TopListProfile/>
                     <ButtonBar />
                     <List />

@@ -17,7 +17,7 @@ class List extends Component{
     renderItem = ({ item , index}) => (
          <ListItem
             title={item.name}
-            leftElement={(<View style ={styles.roundView}><Text>{index + 1}</Text></View>)}
+            leftElement={(<View style ={styles.roundView}><Text style={{fontFamily:'bold'}}>{index + 1}</Text></View>)}
             leftAvatar={{ source: { uri: item.avatar_url } }}
             rightTitle={item.points}
             rightTitleStyle={{fontFamily: "bold", color:"black"}}

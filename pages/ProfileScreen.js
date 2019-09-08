@@ -4,6 +4,9 @@ import {
     SafeAreaView,
     ScrollView
 } from 'react-native';
+import ProfileHead from '../components/ProfileHead';
+import ProfileBody from '../components/ProfileBody';
+import Certificate from '../components/Certificate';
 
 class ProfileScreen extends Component {
 
@@ -11,12 +14,14 @@ class ProfileScreen extends Component {
         headerTitle: "Profile Screen",
         
       };
-      
+
     render = () => {
         return (
             <SafeAreaView>
                 <ScrollView>
-                    <Text>Profile Screen</Text>
+                   <ProfileHead />
+                   <ProfileBody />
+                   <Certificate />
                 </ScrollView>
             </SafeAreaView>
         ) 

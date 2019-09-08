@@ -28,7 +28,8 @@ class ButtonBar extends Component {
             onPress={this.updateIndex}
             selectedIndex={selectedIndex}
             buttons={buttons}
-            containerStyle={{height: 50, borderRadius:8, marginBottom:15 }}
+            containerStyle={{height: 50, marginBottom:15, borderRadius:8, marginLeft:-1, marginRight:-1}}
+            
             textStyle={{fontFamily: 'bold'}}
             
     />  

@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import {
     Text,
-    SafeAreaView,
-    ScrollView,
     View,
     StyleSheet
 } from 'react-native';
 import{
     Avatar,
 } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/Entypo'
+import Icon from 'react-native-vector-icons/Entypo';
 
 class TopListProfile extends Component {
     render = () => {
@@ -23,7 +21,7 @@ class TopListProfile extends Component {
                     >Burakhan</Text>
                     <View style={styles.profileRate}><Icon name="star" size={15}  color="#FFD202" /><Text>  4,2</Text></View>
                     </View>
-                    <View  style={styles.profileScore}><Text style={{fontFamily: "bold", fontSize: 15,}}> 150 </Text></View>
+                    <View  style={styles.profileScore}><Text style={{fontFamily: "bold", fontSize: 15,}}> 150 puan </Text></View>
                </View>
               
         )
