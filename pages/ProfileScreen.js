@@ -19,7 +19,7 @@ class ProfileScreen extends Component {
         return (
             <SafeAreaView>
                 <ScrollView>
-                   <ProfileHead />
+                   <ProfileHead navigation={this.props.navigation}/>
                    <ProfileBody />
                    <Certificate />
                 </ScrollView>

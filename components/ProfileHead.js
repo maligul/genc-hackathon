@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,
+  TouchableOpacity
 } from 'react-native';
 import CardWithAvatar from './CardWithAvatar';
 import {Button} from 'react-native-elements';
@@ -26,7 +27,10 @@ class ProfileHead extends Component {
                       </View> 
                     <View style ={styles.info}>
                         <View style ={styles.cell}><Text>Basarili gorev</Text><Text>1</Text></View>
+                        <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Waiting')}}>
                         <View style = {styles.cell}><Text>Bekleyen Gorev</Text><Text>5</Text></View>
+                        </TouchableOpacity>
+                        
                         <View style ={styles.cellEnd}><Text>Degerlendirme</Text><View style ={styles.profileRate}><Icon name="star" size={15}  color="#FFD202" /><Text>4,2</Text></View></View>
 
 
