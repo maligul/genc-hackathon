@@ -9,6 +9,7 @@ import {
 import List from '../components/List';
 import TopListProfile from '../components/TopListProfile'
 import Badge from '../components/Badge';
+import ButtonBar from '../components/ButtonBar'
 
 class TopListScreen extends Component {
 
@@ -24,6 +25,7 @@ class TopListScreen extends Component {
                 <ScrollView style={styles.scroll}>
                     
                     <TopListProfile/>
+                    <ButtonBar />
                     <List />
                 </ScrollView>
             </SafeAreaView>
