@@ -4,7 +4,8 @@ import {
    StyleSheet,
    Text
 } from 'react-native';
-;
+
+
 
 
 class ProfileBody extends Component {
@@ -14,6 +15,7 @@ class ProfileBody extends Component {
         <View style ={styles.hiza}>
            
             <View style ={styles.roundView}><Text style={{fontSize: 15, fontFamily: 'semi'}}>PUANIM</Text><Text style = {{fontSize:48, fontFamily:'bold'}}>250</Text></View>
+            
         </View>
         ) 
     }
