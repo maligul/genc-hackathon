@@ -16,7 +16,8 @@ function CardWithAvatar(props){
         borderRadius = 20,
         url = undefined,
         width = undefined,
-        style
+        style,
+        onPress
     } = props;
 
     const styles = StyleSheet.create({
@@ -48,6 +49,7 @@ function CardWithAvatar(props){
                     source={{
                         uri: url,
                     }}
+                    onPress={onPress}
                     />
             </View>
             
