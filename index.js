@@ -57,9 +57,9 @@ const TopListStack= createStackNavigator({
 const BottomNavigator = createBottomTabNavigator(
     {
         Mission: {screen: MissionStack},
-        Profile: {screen: ProfileStack},
+        TopList: {screen: TopListStack},
         Shop: {screen:ShopStack},
-        TopList: {screen: TopListStack} 
+        Profile: {screen: ProfileStack}, 
     },
     {
         initialRouteName: "Mission"
